@@ -49,7 +49,8 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: 'history', // available values: 'hash', 'history'
       env: {
-        ENV: require('dotenv').config().parsed
+        SUPABASE_URL: require('dotenv').config().parsed.SUPABASE_URL,
+        SUPABASE_KEY: require('dotenv').config().parsed.SUPABASE_KEY
       },
       // transpile: false,
       // publicPath: '/',
