@@ -7,7 +7,7 @@ node_modules
 /dist
 
 # supabase
-src/boot/supabase.js
+/src/boot/supabase.js
 
 # Cordova related directories and files
 /src-cordova/node_modules

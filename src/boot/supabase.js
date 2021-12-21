@@ -3,7 +3,6 @@ import useAuthUser from 'src/composables/UseAuthUser'
 
 const supabaseUrl = 'XXXXXX'
 const supabaseKey = 'YYYYYY'
-
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 supabase.auth.onAuthStateChange((event, session) => {
