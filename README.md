@@ -4,11 +4,15 @@ Project built on the Youtube Quasar + Supabase course: [Playlist on Youtube](htt
 
 ## Init Config
 
-You are required to configure the ***src/boot/supabase.js*** file with your supabase credentials.
+You are required to configure the ***quasar.conf.js*** file with your supabase credentials.
 
 ```js
-const supabaseUrl = 'XXXXXX'
-const supabaseKey = 'YYYYYY'
+build: {
+  env: {
+    SUPABASE_URL: 'XXXX',
+    SUPABASE_KEY: 'YYYY'
+  }
+}
 ```
 
 ## Install the dependencies
