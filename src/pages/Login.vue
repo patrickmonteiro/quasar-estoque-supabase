@@ -73,9 +73,8 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      // console.log(process.env.API.SUPABASE_KEY)
       if (isLoggedIn) {
-        router.push('me')
+        router.push({ name: 'me' })
       }
     })
 
