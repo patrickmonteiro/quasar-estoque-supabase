@@ -1,10 +1,10 @@
 # Quasar Estoque Supabase (quasar-estoque-supabase)
 
-A Quasar Framework app
+Project built on the Youtube Quasar + Supabase course: [Playlist on Youtube](https://www.youtube.com/watch?v=6ep8cy6pP74&list=PLBjvYfV_TvwIfgvouZCaLtgjYdrWQL02d&index=1)
 
 ## Init Config
 
-You are required to configure the src/boot/supabase.js file with your supabase credentials.
+You are required to configure the ***src/boot/supabase.js*** file with your supabase credentials.
 
 ```js
 const supabaseUrl = 'XXXXXX'
