@@ -51,7 +51,7 @@ module.exports = configure(function (ctx) {
       env: {
         SUPABASE_URL: 'https://fiopknivucqeguhjpqdo.supabase.co',
         SUPABASE_KEY: 'yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTUyMTcwOSwiZXhwIjoxOTU1MDk3NzA5fQ.prM0rQ-qe7mHLFgm_508rCaC47lVJpx7YQqFnPUsHVs'
-      }
+      },
       // transpile: false,
       // publicPath: '/',
 
