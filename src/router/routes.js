@@ -18,7 +18,9 @@ const routes = [
     children: [
       { path: 'me', name: 'me', component: () => import('pages/Me.vue') },
       { path: 'category', name: 'category', component: () => import('pages/category/List.vue') },
-      { path: 'form-category/:id?', name: 'form-category', component: () => import('pages/category/Form.vue') }
+      { path: 'form-category/:id?', name: 'form-category', component: () => import('pages/category/Form.vue') },
+      { path: 'product', name: 'product', component: () => import('pages/product/List.vue') },
+      { path: 'form-product/:id?', name: 'form-product', component: () => import('pages/product/Form.vue') }
       // { path: '', component: () => import('pages/Index.vue') }
     ],
     meta: {
