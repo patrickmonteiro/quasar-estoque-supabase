@@ -7,7 +7,15 @@
         </p>
       </div>
       <q-form class="col-md-7 col-xs-12 col-sm-12 q-gutter-y-md" @submit.prevent="handleSubmit">
+
         <q-input
+          label="Image"
+          stack-label
+          v-model="img"
+          type="file"
+          accept="image/*"
+        />
+       <q-input
           label="Name"
           v-model="form.name"
           :rules="[val => (val && val.length > 0) || 'Name is required']"
@@ -21,17 +29,15 @@
         <q-input
           label="Amount"
           v-model="form.amount"
-          :rules="[val => (val && val.length > 0) || 'Amount is required']"
+          :rules="[val => !!val || 'Amount is required']"
           type="number"
-          lazy-rules
         />
 
         <q-input
           label="Price"
           v-model="form.price"
-          :rules="[val => (val && val.length > 0) || 'Price is required']"
+          :rules="[val => !!val || 'Price is required']"
           prefix="R$"
-          lazy-rules
         />
 
         <q-select
@@ -42,6 +48,7 @@
           option-label="name"
           map-options
           emit-value
+          :rules="[val => !!val || 'Category is required']"
         />
 
         <q-btn
@@ -78,7 +85,7 @@ export default defineComponent({
     const table = 'product'
     const router = useRouter()
     const route = useRoute()
-    const { post, getById, update, list } = useApi()
+    const { post, getById, update, list, uploadImg } = useApi()
     const { notifyError, notifySuccess } = useNotify()
 
     const isUpdate = computed(() => route.params.id)
@@ -90,8 +97,10 @@ export default defineComponent({
       description: '',
       amount: 0,
       price: 0,
-      category_id: ''
+      category_id: '',
+      img_url: ''
     })
+    const img = ref([])
 
     onMounted(() => {
       handleListCategories()
@@ -106,6 +115,10 @@ export default defineComponent({
 
     const handleSubmit = async () => {
       try {
+        if (img.value.length > 0) {
+          const imgUrl = await uploadImg(img.value[0], 'products')
+          form.value.img_url = imgUrl
+        }
         if (isUpdate.value) {
           await update(table, form.value)
           notifySuccess('Update Successfully')
@@ -132,7 +145,8 @@ export default defineComponent({
       handleSubmit,
       form,
       isUpdate,
-      optionsCategory
+      optionsCategory,
+      img
     }
   }
 })
