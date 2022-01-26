@@ -7,7 +7,7 @@
     <q-card>
       <q-card-section>
         <div class="text-h6">
-          Detalhes
+          Details
         </div>
       </q-card-section>
 
@@ -28,7 +28,7 @@
       <q-card-actions align="right">
         <q-btn label="Cancel" color="primary" outline v-close-popup />
         <q-btn
-          label="Fazer Pedido"
+          label="Buy on whatsapp"
           icon="mdi-whatsapp"
           color="green-7"
           @click="handleSendWpp"
