@@ -15,11 +15,13 @@
           type="file"
           accept="image/*"
         />
+
        <q-input
           label="Name"
           v-model="form.name"
           :rules="[val => (val && val.length > 0) || 'Name is required']"
         />
+        {{form.name}}
 
         <q-editor
           v-model="form.description"
