@@ -97,7 +97,9 @@ export default defineComponent({
     const handleGetConfig = async () => {
       try {
         config = await listPublic(table, user.value.id)
-        form.value = config[0]
+        if (config.length > 0) {
+          form.value = config[0]
+        }
       } catch (error) {
         notifyError(error.message)
       }
