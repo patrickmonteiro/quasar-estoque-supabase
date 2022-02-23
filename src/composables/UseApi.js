@@ -10,7 +10,8 @@ const brand = ref({
   primary: '',
   secondary: '',
   name: '',
-  phone: ''
+  phone: '',
+  paralax_url: ''
 })
 
 export default function useApi () {
