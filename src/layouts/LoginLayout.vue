@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-toolbar-title>
-          Quasar Estoque
+          Quasar Estoque Supabase
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
