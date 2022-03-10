@@ -169,6 +169,7 @@ module.exports = configure(function (ctx) {
         orientation: 'portrait',
         background_color: '#ffffff',
         theme_color: '#2c9c6a',
+        categories: ['utilities', 'productivity', 'personalization'],
         icons: [
           {
             src: 'icons/icon-128x128.png',
@@ -194,6 +195,12 @@ module.exports = configure(function (ctx) {
             src: 'icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
+          },
+          {
+            src: 'icons/maskable_icon_x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable'
           }
         ]
       }
