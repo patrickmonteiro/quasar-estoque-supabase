@@ -50,7 +50,15 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition
+          appear
+          enter-active-class="animated fadeInUp"
+          leave-active-class="animated fadeOutDown"
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </q-page-container>
   </q-layout>
 </template>
